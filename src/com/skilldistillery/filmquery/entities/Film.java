@@ -6,7 +6,7 @@ public class Film {
 	private int id;
 	private String title;
 	private int releaseYear;
-	private String languageId;
+	private String language;
 	private int rentalDuration;
 	private double rentalRate;
 	private int length;
@@ -23,7 +23,7 @@ public class Film {
 		this.id = id;
 		this.title = title;
 		this.releaseYear = releaseYear;
-		this.languageId = languageId;
+		this.language = language;
 		this.rentalDuration = rentalDuration;
 		this.rentalRate = rentalRate;
 		this.length = length;
@@ -62,12 +62,12 @@ public class Film {
 		this.releaseYear = releaseYear;
 	}
 
-	public String getLanguageId() {
-		return languageId;
+	public String getLanguage() {
+		return language;
 	}
 
-	public void setLanguageId(String languageId) {
-		this.languageId = languageId;
+	public void setLanguage(String language) {
+		this.language = language;
 	}
 
 	public int getRentalDuration() {
@@ -133,7 +133,7 @@ public class Film {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + id;
-		result = prime * result + ((languageId == null) ? 0 : languageId.hashCode());
+		result = prime * result + ((language == null) ? 0 : language.hashCode());
 		result = prime * result + length;
 		result = prime * result + ((rating == null) ? 0 : rating.hashCode());
 		result = prime * result + releaseYear;
@@ -159,10 +159,10 @@ public class Film {
 		Film other = (Film) obj;
 		if (id != other.id)
 			return false;
-		if (languageId == null) {
-			if (other.languageId != null)
+		if (language == null) {
+			if (other.language != null)
 				return false;
-		} else if (!languageId.equals(other.languageId))
+		} else if (!language.equals(other.language))
 			return false;
 		if (length != other.length)
 			return false;
@@ -192,12 +192,18 @@ public class Film {
 		return true;
 	}
 
+
 	@Override
 	public String toString() {
-		return "Film [id=" + id + ", title=" + title + ", releaseYear=" + releaseYear + ", languageId=" + languageId
+		return "Film [id=" + id + ", title=" + title + ", releaseYear=" + releaseYear + ", language=" + language
 				+ ", rentalDuration=" + rentalDuration + ", rentalRate=" + rentalRate + ", length=" + length
 				+ ", replacementCost=" + replacementCost + ", rating=" + rating + ", specialFeatures=" + specialFeatures
-				+ "]";
+				+ ", actors=" + actors + "]";
 	}
+
+
+	
+
+	
 
 }
