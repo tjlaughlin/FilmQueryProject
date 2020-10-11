@@ -15,10 +15,7 @@ public class Film {
 	private String specialFeatures;
 	private List<Actor> actors;
 
-	
-
-
-	public Film(int id, String title, int releaseYear, String languageId, int rentalDuration, double rentalRate,
+	public Film(int id, String title, int releaseYear, String language, int rentalDuration, double rentalRate,
 			int length, double replacementCost, String rating, String specialFeatures, List<Actor> actors) {
 		this.id = id;
 		this.title = title;
@@ -33,10 +30,8 @@ public class Film {
 		this.actors = actors;
 	}
 
-	
 	public Film() {
 	}
-
 
 	public int getId() {
 		return id;
@@ -121,13 +116,11 @@ public class Film {
 	public List<Actor> getActors() {
 		return actors;
 	}
-	
-	
+
 	public void setActors(List<Actor> actors) {
 		this.actors = actors;
 	}
-	
-	
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -192,18 +185,11 @@ public class Film {
 		return true;
 	}
 
-
 	@Override
 	public String toString() {
-		return "Film [id=" + id + ", title=" + title + ", releaseYear=" + releaseYear + ", language=" + language
-				+ ", rentalDuration=" + rentalDuration + ", rentalRate=" + rentalRate + ", length=" + length
-				+ ", replacementCost=" + replacementCost + ", rating=" + rating + ", specialFeatures=" + specialFeatures
-				+ ", actors=" + actors + "]";
+		return "\u2022 The film with the id number " + id + " is " + title + ", " + "and was released in " + releaseYear
+				+ " \n\u2022 The films language was shot in " + language + "\n\u2022 Rating: " + rating
+				+ "\n\u2022 Actors: " + actors;
 	}
-
-
-	
-
-	
 
 }
