@@ -5,6 +5,7 @@ import java.util.List;
 public class Film {
 	private int id;
 	private String title;
+	private String description;
 	private int releaseYear;
 	private String language;
 	private int rentalDuration;
@@ -15,10 +16,13 @@ public class Film {
 	private String specialFeatures;
 	private List<Actor> actors;
 
-	public Film(int id, String title, int releaseYear, String language, int rentalDuration, double rentalRate,
-			int length, double replacementCost, String rating, String specialFeatures, List<Actor> actors) {
+	public Film(int id, String title, String description, int releaseYear, String language, int rentalDuration,
+			double rentalRate, int length, double replacementCost, String rating, String specialFeatures,
+			List<Actor> actors) {
+		super();
 		this.id = id;
 		this.title = title;
+		this.description = description;
 		this.releaseYear = releaseYear;
 		this.language = language;
 		this.rentalDuration = rentalDuration;
@@ -121,6 +125,14 @@ public class Film {
 		this.actors = actors;
 	}
 
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -187,9 +199,9 @@ public class Film {
 
 	@Override
 	public String toString() {
-		return "\u2022 The film with the id number " + id + " is " + title + ", " + "and was released in " + releaseYear
-				+ " \n\u2022 The films language was shot in " + language + "\n\u2022 Rating: " + rating
-				+ "\n\u2022 Actors: " + actors;
+		return "\u2022 Title: " + title + " \n\u2022 Film ID: " + id + "\n\u2022 Release year: " + releaseYear
+				+ " \n\u2022 Language: " + language + "\n\u2022 Rating: " + rating + "\n\u2022 Description: "
+				+ description + "\n\u2022 Actors: " + actors + "\n\n";
 	}
 
 }

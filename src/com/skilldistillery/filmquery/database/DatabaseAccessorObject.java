@@ -40,6 +40,7 @@ public class DatabaseAccessorObject implements DatabaseAccessor {
 				film = new Film();
 				film.setId(filmResult.getInt("id"));
 				film.setTitle(filmResult.getString("title"));
+				film.setDescription(filmResult.getString("description"));
 				film.setReleaseYear(filmResult.getInt("release_year"));
 				film.setRentalRate(filmResult.getDouble("rental_rate"));
 				film.setLength(filmResult.getInt("length"));
@@ -127,6 +128,7 @@ public class DatabaseAccessorObject implements DatabaseAccessor {
 				Film film = new Film();
 				film.setId(filmResult.getInt("id"));
 				film.setTitle(filmResult.getString("title"));
+				film.setDescription(filmResult.getString("description"));
 				film.setReleaseYear(filmResult.getInt("release_year"));
 				film.setRentalRate(filmResult.getDouble("rental_rate"));
 				film.setLength(filmResult.getInt("length"));
